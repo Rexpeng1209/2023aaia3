@@ -11,10 +11,12 @@ public:
     }
     string tictactoe(vector<vector<int>>& moves) {
         int board[3][3]={};
+        int now=1;
         for(auto move:moves){
             int i=move[0], j = move[1];
-            board[i][j]=1;
+            board[i][j]=now;
             myPrintBoard(board);
+            now=3-now;
         }
         return "A";
     }
